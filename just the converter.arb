@@ -1,0 +1,26 @@
+#just the converter
+
+puts "Enter ingredient"
+    ing = gets.chomp.capitalize 
+puts "Enter metric"
+    met = gets.chomp.downcase
+puts "Enter quantity"
+    qua = gets.chomp.to_i
+
+#check for integer doesn't work - this let's everything through as to_i makes it all i but without even numbers are returned as errors
+puts "How many people is this recipe for?"
+    o_n = gets.chomp.to_i
+    Integer(o_n)
+    unless (o_n.is_a?(Integer) == true)
+        puts "Please enter a number"
+        o_n = gets.chomp
+    end
+puts "How many people are you cooking for?"
+    n_n = gets.chomp.to_i
+    Integer(n_n)
+    unless (n_n.is_a?(Integer) == true)
+        puts "Please enter a number"
+        n_n = gets.chomp
+    end
+
+puts "#{((qua/o_n)*n_n)} #{met} #{ing}"

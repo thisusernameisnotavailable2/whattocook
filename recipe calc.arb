@@ -1,0 +1,24 @@
+#recipe portion/ingredients calc wih user input generating hash
+
+puts "Please enter your recipe. Press X when done. " 
+puts "Enter ingredient"
+
+loop do 
+    ing = gets.chomp.capitalize 
+if ing == "X"
+    break loop
+else puts "Enter metric"
+    met = gets.chomp.downcase
+    puts "Enter quantity"
+    qua = gets.chomp
+    a1 = [qua, met, ing]
+    a1.each do |add|
+        "#{add} + 1"
+    end
+    puts "Enter another ingredient, if done press X"
+
+end
+
+
+
+end
